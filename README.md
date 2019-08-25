@@ -3,7 +3,7 @@
  Spotify-Checker is a tools helps to Mass Spotify Accounts Checker .Spotify-Checker is Developed by @Xpykerz. The script is writen is python. This tool will works on both Linux,Windows and Android by using python.
  
 You can able to check Spotify Account Combo list using this tool .
-note : combo in the form Email:Password
+note : combo in the format Email:Password
 
 ## Installation
 
