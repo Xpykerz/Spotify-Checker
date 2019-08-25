@@ -26,6 +26,7 @@ In Android
 apt-get update && apt-get upgrade
 apt-get install python2
 apt install git
+pip2 install requests
 git clone https://github.com/Xpykerz/Spotify-Checker.git
 cd Spotify-Checker
 python2 Spotify-Checker.py
