@@ -15,7 +15,7 @@ In Linux
 apt-get update && apt-get upgrade
 apt-get install python
 apt install git
-git https://github.com/Xpykerz/Spotify-Checker.git
+git clone https://github.com/Xpykerz/Spotify-Checker.git
 cd Spotify-Checker
 chmod +x Spotify-Checker.py
 ./Spotify-Checker.py
@@ -25,7 +25,7 @@ In Android
 ```
 apt-get update && apt-get upgrade
 apt-get install python2
-apt-install git
+apt install git
 git clone https://github.com/Xpykerz/Spotify-Checker.git
 cd Spotify-Checker
 python2 Spotify-Checker.py
