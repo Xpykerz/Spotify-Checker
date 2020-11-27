@@ -1,4 +1,4 @@
-# Spotify-Checker 
+# Spotify-Checker  [Temporarily Archived]
 
  Spotify-Checker is a tools helps to Mass Spotify Accounts Checker .Spotify-Checker is Developed by @Xpykerz. The script is writen is python. This tool will works on both Linux,Windows and Android by using python.
  
